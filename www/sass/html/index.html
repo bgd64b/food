@@ -1,0 +1,99 @@
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+    <header>
+        <div id="back" class="button-cl">
+            <i class="fa fa-arrow-left" id="action" aria-hidden="true"></i>
+        </div>
+        <div id="search">
+            <i class="fa fa-search" id="action" aria-hidden="true"></i>
+        </div>
+        <div id="title">
+            <p>The first title</p>
+        </div>
+        <div id="menu" class="button-cl">
+            <div class="menu-button" id="action">
+                <div id="top" class="bar"></div>
+                <div id="middle" class="bar"></div>
+                <div id="bottom" class="bar"></div>
+            </div>
+        </div>
+    </header>
+    <div class="main-content">
+
+    </div>
+    <footer>
+        <p>Copyright Catrinoiu Bogdan</p>
+    </footer>
+
+
+
+    <nav id="search">
+
+    </nav>
+    <nav id="lateral">
+        <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </nav>
+
+
+
+
+    <script>
+        $("#menu").click(function() {
+            $("#top").toggleClass('top');
+            $("#middle").toggleClass('middle');
+            $("#bottom").toggleClass('bottom');
+        });
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        (function($){
+
+            $.fn.extend({
+
+                addTemporaryClass: function(className, duration) {
+                    var elements = this;
+                    setTimeout(function() {
+                        elements.removeClass(className);
+                    }, duration);
+
+                    return this.each(function() {
+                        $(this).addClass(className);
+                    });
+                }
+            });
+
+        })(jQuery);
+        $('.button-cl').click(function() {
+            $('#action').addTemporaryClass("btn", 500);
+        })
+    </script>
+</body>
+</html>
